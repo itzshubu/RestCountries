@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* navbar css */
+html{
+    scroll-behavior: smooth;
+}
+.img img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    box-shadow: 2px 2px 3px gray;
+   
+}
+.img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-h1{
+    padding: 2px;
+    margin: 0px 20px;
+    box-shadow: 2px 2px 3px gray;
+}
+header{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: #bdedff;
+}
+.ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul li a{
+    text-decoration: none;
+    padding: 3px 10px;
+    margin: 0px 5px;
+    color: black;
+    font-weight:600;
+    font-size: 20px;
+    transition: all 1s ease-out;
+}
+hr{
+    display: none;
+}
+li a:hover{
+    /* background-image:linear-gradient(to right,#0fd850 0%,#f9f047 100%); */
+    border-radius: 10px;
+    text-decoration:underline;
+    /* transition: all 2s linear; */
+}
+
+.icon{
+    display: none;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form input{
+    margin: 1px;
+    height: 30px;
+    padding: 0px 4px;
+    border: 1.4px solid black;
+    font-weight: 700;
+}
+form>input[type=button]{
+    border:  2px solid rgb(22, 159, 22);
+    background-color: rgb(128, 184, 128);
+}
+
+/* css for suggestions div */
+#suggestions {
+    display: none;
+    position: absolute;
+    top: 41px;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+}
+#suggestions ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+#suggestions li:hover {
+    background-color: #f4f4f4;
+}
+
+
+/* photo related to country section */
+.flexx{
+    justify-content: center;
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+#w150>div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    align-items: center;
+  
+}
+#w100>div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    align-items: center;
+
+}
+#w150 img{
+    width: 250px;
+    aspect-ratio: 3/2;
+    object-fit:cover;
+    margin:10px 10px;
+}
+
+#w100 img{
+    width: 150px;
+    margin: 4px;
+}
+
+.mainphotodiv>div{
+    text-align: center;
+}
