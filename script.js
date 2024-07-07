@@ -12,7 +12,11 @@ async function main(one, name, country) {
     console.log(name);
     console.log(country);
     console.log(one)
-    const url = `https://restcountries.com/v3.1/${name}/${country}?fullText=true`;
+    if(name !== ""){
+        url = `https://restcountries.com/v3.1/${name}/${country}?fullText=true`;
+    }else{
+        url = `https://restcountries.com/v3.1/${country}?fullText=true`;
+    }
 
     const options = {
         method: "GET",
@@ -168,7 +172,7 @@ function country() {
                     li.textContent = country;
                     li.onclick = function() {
                         document.getElementById('text').value = country;
-                        suggestionsDiv.innerHTML = '';
+                        // suggestionsDiv.innerHTML = '';
                     };
                     ul.appendChild(li);
                 });
@@ -198,7 +202,7 @@ function country() {
 // api and js for get the photos related to country
  function photosearch (countryname) {
     // Replace 'YOUR_API_KEY' with your actual Pixabay API key
-    const apiKey = "your_pixabay_api_key";
+    const apiKey = "your api key";
      
     // Replace 'YOUR_COUNTRY_NAME' with the name of the country you want to search for
     const countryName = `${countryname}`

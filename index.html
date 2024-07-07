@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixabay Photo Search</title>
     <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" media="screen and (max-width:900px)" href="src/phone.css" />
 </head>
@@ -28,11 +29,12 @@
         </ul>
 
         <form action="#" class="relative text-center">
-            <input type="text" id="text" oninput="showSuggestions(this.value)"  />
+            <input type="text" id="text" oninput="showSuggestions(this.value)" />
             <div id="suggestions"></div>
-            <span class="material-symbols-outlined cursor-pointer text-[30px] hover:bg-blue-400 h-[30px] svgsearch" onclick="country()">
+            <span class="material-symbols-outlined cursor-pointer text-[30px] hover:bg-blue-400 h-[30px] svgsearch"
+                onclick="country()">
                 search
-                </span>
+            </span>
         </form>
 
         <div class="icon" onclick="myFunction()">
@@ -48,9 +50,9 @@
 
 
     <div class="flex gap-4 flex-wrap container mx-auto my-5 p-2 justify-center" id="carddiv">
-      <!-- all the divs containes the data about the country is appended here -->
+        <!-- all the divs containes the data about the country is appended here -->
     </div>
-        <div class="text-center font-bold text-xl">Photos Related to <span id="photoscountryname"></span></div>
+    <div class="text-center font-bold text-xl">Photos Related to <span id="photoscountryname"></span></div>
     <div class="mainphotodiv">
         <div id="w150" class="flexx"></div>
         <div id="w100" class="flexx"></div>
