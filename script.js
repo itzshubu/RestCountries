@@ -202,7 +202,7 @@ function country() {
 // api and js for get the photos related to country
  function photosearch (countryname) {
     // Replace 'YOUR_API_KEY' with your actual Pixabay API key
-    const apiKey = "your api key";
+    const apiKey = `${CONFIG.KEY_API}`;
      
     // Replace 'YOUR_COUNTRY_NAME' with the name of the country you want to search for
     const countryName = `${countryname}`
