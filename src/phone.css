@@ -9,13 +9,13 @@ header {
   width: 100%;
 }
 
-.img img{
-   width: 35px;
-   height: 35px;
+.img img {
+  width: 35px;
+  height: 35px;
 }
 
 .nav-h1 {
-  margin: 0px 7px;
+  margin: 0px 2px;
 }
 
 .ul {
@@ -33,7 +33,7 @@ header {
   /* display: none; */
   z-index: 10;
 }
-.svgsearch{
+.svgsearch {
   height: 24px;
   font-size: 24px;
 }
@@ -87,4 +87,3 @@ form input[type="text"] {
 #suggestions {
   top: 27px;
 }
-

@@ -12,9 +12,6 @@ html{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    /* overflow: hidden; */
-    box-shadow: 2px 2px 3px gray;
-   
 }
 .img{
     display: flex;
@@ -33,12 +30,14 @@ header{
     position: sticky;
     top: 0px;
     background-color: #bdedff;
+    z-index: 10;
 }
 .ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 ul li a{
     text-decoration: none;
