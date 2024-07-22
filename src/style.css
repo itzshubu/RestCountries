@@ -141,3 +141,7 @@ form>input[type=button]{
 .mainphotodiv>div{
     text-align: center;
 }
+.Loading{
+    color: red;
+    font-size: xx-large;
+}

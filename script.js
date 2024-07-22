@@ -78,7 +78,7 @@ function displayCountryInfo(country, container) {
             <a href="#">
                 <img class="my-2 rounded-t-lg mx-auto h-[160px]" src="${flaglink}" alt="${countryname}" />
             </a>
-            <div class="p-5">
+             <div class="p-5">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">${countryname}</h5>
                 <div>
                     <p>Capital City: <span class="font-bold">${capitalCity}</span></p>
@@ -108,7 +108,13 @@ function country() {
 
 // Trigger suggestion function when Enter key is pressed
 document.getElementById('text').addEventListener('keypress', function (event) {
-    if (event.keyCode === 13) {
+    if (event.key === "Enter") {
+        let carddiv = document.getElementById("carddiv");
+        carddiv.innerHTML = "<h1 class='Loading'>Searching  .......  wait</h1>";
+        const w150 = document.getElementById("w150");
+        w150.innerHTML = "<h1 class='Loading'>Searching Photos   .......  wait</h1>";
+        event.preventDefault();
+      // Run your code here
         country()
     }
 });
@@ -170,7 +176,7 @@ window.onclick = function (event) {
 // api and js for get the photos related to country
 function photosearch(countryname) {
     // Replace 'YOUR_API_KEY' with your actual Pixabay API key
-    const apiKey = `${CONFIG.KEY_API}`;
+    const apiKey = `${api.apikey}`;
 
     // Replace 'YOUR_COUNTRY_NAME' with the name of the country you want to search for
     const countryName = `${countryname}`
@@ -181,6 +187,7 @@ function photosearch(countryname) {
     // Construct the URL for the Pixabay API request
     const url = `https://pixabay.com/api/?key=${apiKey}&q=${countryName}&per_page=${perPage}`;
 
+    
     // Make a request to the Pixabay API
     fetch(url)
         .then((response) => {
@@ -199,8 +206,8 @@ function photosearch(countryname) {
 
             // Clear previous results
 
-            w100.innerHTML = " ";
             w150.innerHTML = " ";
+            w100.innerHTML = " ";
 
             data.hits.forEach((photo) => {
                 if (photo.previewWidth == 150) {
